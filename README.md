@@ -469,3 +469,161 @@ A positive response is considered when the customer has made a purchase after be
 | syntheticDataRandomMinaUnequalY\_NOISEprimeComb2   | **0.1(0.5)**  | -0.2(0.4)           | 0.0(0.3)                |
 | verysmallRateYNoisyv2Comb2                         | 0.6(1.6)            | 0.4(1.3)            | **0.8(1.4)**      |
 | verysmallRateYNoisyv2primeComb2                    | -1.0(1.6)           | **0.8(1.1)**  | 0.5(1.8)                |
+
+
+<p float="left">
+  <img src="slearner_lr/Criteo_f2.png" width="310" />
+  <img src="slearner_lr/Criteo_f2'.png" width="310" /> 
+  <img src="slearner_lr/Criteo_f8'.png" width="310" />
+  </p>
+<p float="left">
+  <img src="slearner_lr/Criteo_f8'.png" width="310" />
+  <img src="slearner_lr/Gerber_p2002'.png" width="310" /> 
+  <img src="slearner_lr/Gerber_p2004'.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="slearner_lr/Gerber_p2004.png " width="310" />
+  <img src="slearner_lr/Hillstrom_mens'.png" width="310" /> 
+  <img src="slearner_lr/Hillstrom_mens.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="slearner_lr/Hillstrom_newbie'.png" width="310" />
+  <img src="slearner_lr/Hillstrom_newbie.png" width="310" /> 
+  <img src="slearner_lr/Synth2'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="slearner_lr/Synth2.png" width="310" />
+  <img src="slearner_lr/megafone_X16'.png" width="310" /> 
+  <img src="slearner_lr/megafone_X16.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="slearner_lr/megafone_X21'.png" width="310" />
+  <img src="slearner_lr/megafone_X21.png" width="310" /> 
+  <img src="slearner_lr/retailHero_age'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="slearner_lr/retailHero_age.png" width="310" />
+  <img src="slearner_lr/retailHero_trNum'.png" width="310" /> 
+  <img src="slearner_lr/retailHero_trNum.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="slearner_lr/Synth1.png" width="310" />
+  <img src="slearner_lr/Synth1'.png" width="310" /> 
+  <img src="slearner_lr/zenodoSynth_X10'.png" width="310" />
+</p>
+<p float="left">
+  <img src="slearner_lr/zenodoSynth_X10.png" width="310" />
+  <img src="slearner_lr/zenodoSynth_X31'.png" width="310" /> 
+  <img src="slearner_lr/zenodoSynth_X31.png" width="310" />
+</p>
+
+
+
+<p float="left">
+  <img src="2MLR/Criteo_f8'.png" width="310" />
+  <img src="2MLR/Gerber_p2002'.png" width="310" /> 
+  <img src="2MLR/Gerber_p2004'.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="2MLR/Gerber_p2004.png " width="310" />
+  <img src="2MLR/Hillstrom_mens'.png" width="310" /> 
+  <img src="2MLR/Hillstrom_mens.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MLR/Hillstrom_newbie'.png" width="310" />
+  <img src="2MLR/Hillstrom_newbie.png" width="310" /> 
+  <img src="2MLR/Synth2'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MLR/Synth2.png" width="310" />
+  <img src="2MLR/megafone_X16'.png" width="310" /> 
+  <img src="2MLR/megafone_X16.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MLR/megafone_X21'.png" width="310" />
+  <img src="2MLR/megafone_X21.png" width="310" /> 
+  <img src="2MLR/retailHero_age'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MLR/retailHero_age.png" width="310" />
+  <img src="2MLR/retailHero_trNum'.png" width="310" /> 
+  <img src="2MLR/retailHero_trNum.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="2MLR/Synth1.png" width="310" />
+  <img src="2MLR/Synth1'.png" width="310" /> 
+  <img src="2MLR/zenodoSynth_X10'.png" width="310" />
+</p>
+<p float="left">
+  <img src="2MLR/zenodoSynth_X10.png" width="310" />
+  <img src="2MLR/zenodoSynth_X31'.png" width="310" /> 
+  <img src="2MLR/zenodoSynth_X31.png" width="310" />
+</p>
+
+
+
+<p float="left">
+  <img src="2MXgboost/Criteo_f2.png" width="310" />
+  <img src="2MXgboost/Criteo_f2'.png" width="310" /> 
+  <img src="2MXgboost/Criteo_f8'.png" width="310" />
+  </p>
+<p float="left">
+  <img src="2MXgboost/Criteo_f8'.png" width="310" />
+  <img src="2MXgboost/Gerber_p2002'.png" width="310" /> 
+  <img src="2MXgboost/Gerber_p2004'.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="2MXgboost/Gerber_p2004.png " width="310" />
+  <img src="2MXgboost/Hillstrom_mens'.png" width="310" /> 
+  <img src="2MXgboost/Hillstrom_mens.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MXgboost/Hillstrom_newbie'.png" width="310" />
+  <img src="2MXgboost/Hillstrom_newbie.png" width="310" /> 
+  <img src="2MXgboost/Synth2'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MXgboost/Synth2.png" width="310" />
+  <img src="2MXgboost/megafone_X16'.png" width="310" /> 
+  <img src="2MXgboost/megafone_X16.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MXgboost/megafone_X21'.png" width="310" />
+  <img src="2MXgboost/megafone_X21.png" width="310" /> 
+  <img src="2MXgboost/retailHero_age'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MXgboost/retailHero_age.png" width="310" />
+  <img src="2MXgboost/retailHero_trNum'.png" width="310" /> 
+  <img src="2MXgboost/retailHero_trNum.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="2MXgboost/Synth1.png" width="310" />
+  <img src="2MXgboost/Synth1'.png" width="310" /> 
+  <img src="2MXgboost/zenodoSynth_X10'.png" width="310" />
+</p>
+<p float="left">
+  <img src="2MXgboost/zenodoSynth_X10.png" width="310" />
+  <img src="2MXgboost/zenodoSynth_X31'.png" width="310" /> 
+  <img src="2MXgboost/zenodoSynth_X31.png" width="310" />
+</p>
+
+
