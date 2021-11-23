@@ -36,7 +36,7 @@ You can launch the process with the following command on a Linux machine:
 
 #### For the *VAR_Name* you can use the variable name as it appears in the data, or to use "Comb" in order to generate bias using all the variables in the dataset
 
-## Datasets and Results
+## Datasets
 In our study we used this code with the following datasets:
 
 - *Hillstrom* [[6]](#6): Marketing dataset with 64.000 lines in total. It
@@ -60,8 +60,8 @@ A positive response is considered when the customer has made a purchase after be
 
 - *Synth1* and *Synth2* : Provided in the repo.
 
-
-# Following are the results of the benchmark that demonstrate the behavior of several uplift methods when facing NRA bias on the datasets cited above :
+# Results
+## Following are the results of the benchmark that demonstrate the behavior of several uplift methods when facing NRA bias on the datasets cited above :
 
 <p float="left">
   <img src="FigsBench/GIT_REPO/Criteo_f2.png" width="310" />
@@ -151,11 +151,10 @@ A positive response is considered when the customer has made a purchase after be
 
 
 
+## Following are the results of the treatment samples reweighting
+*The reweighted methods are marked in green and orange while the method w/o reweighting in blue*
 
-
-
-## Following are the results of the treatment samples reweighting for the class transformation approach (with Logistic regression and Xgboost):
-*The reweighted method is marked in orange and the standard method in blue*
+### Class Transformation with Xgboost
 
 
 <p float="left">
@@ -211,6 +210,40 @@ A positive response is considered when the customer has made a purchase after be
 </p>
 
 
+
+| {}                 | CT_Xgboost         | CT_Xgboost_wt1 | CT_Xgboost_wt2 |
+|--------------------|---------------------|---------------------|----------------------------|
+| Criteo\_f2         | 0.2(1.9)            | 2.6(1.8)            | **4.8(1.9)**        |
+| Criteo\_f2'        | **6.9(2.0)**  | 5.1(1.7)            | 4.4(2.6)                   |
+| Criteo\_f8         | 0.1(1.7)            | 3.4(1.5)            | **5.0(1.8)**         |
+| Criteo\_f8'        | -2.5(1.7)           | 1.7(2.2)            | **2.5(2.5)**         |
+| Gerber\_p2002      | -2.1(1.5)           | **-1.6(1.9)** | -2.3(1.8)                  |
+| Gerber\_p2002'     | **-1.5(2.2)** | -1.6(2.0)           | -2.1(1.8)                  |
+| Gerber\_p2004      | -1.8(1.7)           | **-1.7(1.8)** | -2.3(1.9)                  |
+| Gerber\_p2004'     | **-1.1(2.4)** | -1.7(2.0)           | -2.1(2.1)                  |
+| Hillstrom\_mens    | -4.1(2.0)           | -0.2(2.7)           | **0.5(2.4)**         |
+| Hillstrom\_mens'   | **4.6(1.5)**  | 1.8(2.1)            | 2.9(2.1)                   |
+| Hillstrom\_newbie  | 0.1(2.1)            | 1.3(2.0)            | **1.4(2.1)**         |
+| Hillstrom\_newbie' | 1.7(2.1)            | 1.5(2.2)            | **3.0(2.4)**         |
+| Megafone\_X16      | 8.6(0.6)            | 8.4(0.5)            | **15.5(0.5)**        |
+| Megafone\_X16'     | 14.2(0.5)           | 14.3(0.4)           | **16.5(0.5)**        |
+| Megafone\_X21      | 12.0(0.4)           | 12.0(0.4)           | **16.0(0.5)**        |
+| Megafone\_X21'     | 12.8(0.4)           | 12.7(0.4)           | **16.1(0.5)**        |
+| Synth1             | 1.7(0.9)            | 2.5(0.7)            | **8.9(2.9)**         |
+| Synth1'            | -0.4(3.0)           | 0.8(2.7)            | **9.1(1.7)**         |
+| Synth2             | 8.1(0.5)            | 8.3(0.5)            | **9.7(0.2)**         |
+| Synth2'            | 8.6(0.1)            | 8.4(0.3)            | **9.7(0.1)**         |
+| retailHero\_age    | 0.3(0.4)            | 0.3(0.4)            | **0.6(0.4)**         |
+| retailHero\_age'   | 0.6(0.4)            | **0.7(0.4)**  | 0.6(0.4)                   |
+| retailHero\_trNum  | 0.4(0.3)            | 0.4(0.3)            | **0.6(0.3)**         |
+| retailHero\_trNum' | 0.5(0.4)            | **0.6(0.4)**  | 0.5(0.4)                   |
+| zenodoSynth\_X10   | 7.0(2.2)            | **7.4(2.0)**  | 6.5(2.1)                   |
+| zenodoSynth\_X10'  | 6.9(2.1)            | **7.3(2.1)**  | 6.6(1.8)                   |
+| zenodoSynth\_X31   | 6.6(2.0)            | **7.2(2.5)** | 6.5(2.2)                   |
+| zenodoSynth\_X31'  | **9.2(2.0)**  | 7.9(2.3)            | 7.4(2.1)                   |
+
+### Class Transformation with LR
+
 <p float="left">
   <img src="CT_LR_weighted/CTLR2/Criteo_f2.png" width="310" />
   <img src="CT_LR_weighted/CTLR2/Criteo_f2'.png" width="310" /> 
@@ -264,9 +297,6 @@ A positive response is considered when the customer has made a purchase after be
 </p>
 
 
-
-### The corresponding average qini values :
-
 | {}                 | CT_LR              | CT_LR_wt1      | CT_LR_wt2 |
 |--------------------|---------------------|---------------------|-----------------------|
 | Criteo\_f2         | 1.9(1.2)            | 6.1(1.5)            | **8.2(2.0)**    |
@@ -297,74 +327,6 @@ A positive response is considered when the customer has made a purchase after be
 | zenodoSynth\_X10'  | **12.0(1.7)** | 11.6(1.9)           | 9.9(2.0)              |
 | zenodoSynth\_X31   | 12.0(1.9)           | **12.1(1.7) **| 9.9(2.0)              |
 | zenodoSynth\_X31'  | 11.8(1.5)           | **12.1(1.8)** | 11.1(1.6)             |
-
-
-
-| {}                 | CT_Xgboost         | CT_Xgboost_wt1 | CT_Xgboost_wt2 |
-|--------------------|---------------------|---------------------|----------------------------|
-| Criteo\_f2         | 0.2(1.9)            | 2.6(1.8)            | **4.8(1.9)**        |
-| Criteo\_f2'        | **6.9(2.0)**  | 5.1(1.7)            | 4.4(2.6)                   |
-| Criteo\_f8         | 0.1(1.7)            | 3.4(1.5)            | **5.0(1.8)**         |
-| Criteo\_f8'        | -2.5(1.7)           | 1.7(2.2)            | **2.5(2.5)**         |
-| Gerber\_p2002      | -2.1(1.5)           | **-1.6(1.9)** | -2.3(1.8)                  |
-| Gerber\_p2002'     | **-1.5(2.2)** | -1.6(2.0)           | -2.1(1.8)                  |
-| Gerber\_p2004      | -1.8(1.7)           | **-1.7(1.8)** | -2.3(1.9)                  |
-| Gerber\_p2004'     | **-1.1(2.4)** | -1.7(2.0)           | -2.1(2.1)                  |
-| Hillstrom\_mens    | -4.1(2.0)           | -0.2(2.7)           | **0.5(2.4)**         |
-| Hillstrom\_mens'   | **4.6(1.5)**  | 1.8(2.1)            | 2.9(2.1)                   |
-| Hillstrom\_newbie  | 0.1(2.1)            | 1.3(2.0)            | **1.4(2.1)**         |
-| Hillstrom\_newbie' | 1.7(2.1)            | 1.5(2.2)            | **3.0(2.4)**         |
-| Megafone\_X16      | 8.6(0.6)            | 8.4(0.5)            | **15.5(0.5)**        |
-| Megafone\_X16'     | 14.2(0.5)           | 14.3(0.4)           | **16.5(0.5)**        |
-| Megafone\_X21      | 12.0(0.4)           | 12.0(0.4)           | **16.0(0.5)**        |
-| Megafone\_X21'     | 12.8(0.4)           | 12.7(0.4)           | **16.1(0.5)**        |
-| Synth1             | 1.7(0.9)            | 2.5(0.7)            | **8.9(2.9)**         |
-| Synth1'            | -0.4(3.0)           | 0.8(2.7)            | **9.1(1.7)**         |
-| Synth2             | 8.1(0.5)            | 8.3(0.5)            | **9.7(0.2)**         |
-| Synth2'            | 8.6(0.1)            | 8.4(0.3)            | **9.7(0.1)**         |
-| retailHero\_age    | 0.3(0.4)            | 0.3(0.4)            | **0.6(0.4)**         |
-| retailHero\_age'   | 0.6(0.4)            | **0.7(0.4)**  | 0.6(0.4)                   |
-| retailHero\_trNum  | 0.4(0.3)            | 0.4(0.3)            | **0.6(0.3)**         |
-| retailHero\_trNum' | 0.5(0.4)            | **0.6(0.4)**  | 0.5(0.4)                   |
-| zenodoSynth\_X10   | 7.0(2.2)            | **7.4(2.0)**  | 6.5(2.1)                   |
-| zenodoSynth\_X10'  | 6.9(2.1)            | **7.3(2.1)**  | 6.6(1.8)                   |
-| zenodoSynth\_X31   | 6.6(2.0)            | **7.2(2.5)** | 6.5(2.2)                   |
-| zenodoSynth\_X31'  | **9.2(2.0)**  | 7.9(2.3)            | 7.4(2.1)                   |
-
-# Slearner with Xgboost
-
-
-
-| {}                                                 | SLearner\_Xgboost   | SLearner\_Xgboost_trtProb | SLearner\_Xgboost_trtProbXgboost |
-|----------------------------------------------------|---------------------|---------------------------|----------------------------------|
-| SyntheticData\_zenodo\_20Kprimex10\_informative    | **11.8(2.1)** | 11.4(2.4)                 | 11.3(2.1)                        |
-| SyntheticData\_zenodo\_20Kprimex31\_uplift\_inc... | **11.1(2.1)** | 10.8(2.1)                 | 11.0(2.4)                        |
-| SyntheticData\_zenodo\_20Kx10\_informative         | **11.5(2.0)** | 11.4(2.4)                 | 11.1(2.2)                        |
-| SyntheticData\_zenodo\_20Kx31\_uplift\_increase    | **11.7(2.2)** | 10.9(1.8)                 | 11.1(2.1)                        |
-| criteoNewSample50kIdPf2                            | 8.0(1.9)            | 7.5(2.1)                  | **8.6(2.5)**               |
-| criteoNewSample50kIdPf8                            | **8.4(1.9)**  | **8.4(2.0)**        | **8.4(2.1)**               |
-| criteoNewSample50kprimeIdPf2                       | 6.2(2.7)            | **6.8(1.8)**        | 6.5(2.8)                         |
-| criteoNewSample50kprimeIdPf8                       | 6.9(2.1)            | **7.5(2.9)**        | 7.3(2.0)                         |
-| gerber\_Khiops\_NvsCDIdPp2002                      | -2.0(2.0)           | **-1.9(2.0)**       | -2.1(1.9)                        |
-| gerber\_Khiops\_NvsCDIdPp2004                      | -1.8(2.0)           | **-1.7(2.1)**       | -2.2(1.8)                        |
-| gerber\_Khiops\_NvsCDprimeIdPp2002                 | -1.9(2.2)           | -2.1(1.9)                 | **-1.7(1.7)**             |
-| gerber\_Khiops\_NvsCDprimeIdPp2004                 | -1.9(2.0)           | **-1.8(2.0)**       | **-1.8(2.3)**              |
-| hillstrom\_w\_Discmens                             | 2.5(2.7)            | 3.0(2.3)                  | **3.1(2.5)**               |
-| hillstrom\_w\_Discnewbie                           | **3.3(2.2)**  | 3.0(2.4)                  | 2.3(2.0)                         |
-| hillstrom\_w\_Discprimemens                        | **2.9(2.9)**  | 2.7(2.6)                  | 2.3(2.4)                         |
-| hillstrom\_w\_Discprimenewbie                      | 2.5(2.7)            | 2.6(2.5)                  | **3.7(2.4)**               |
-| megafoneIdPX\_16                                   | **17.9(0.4)** | **17.9(0.4)**       | 17.8(0.5)                        |
-| megafoneIdPX\_21                                   | 18.4(0.4)           | **18.5(0.4)**       | 18.2(0.5)                        |
-| megafoneprimeIdPX\_16                              | **18.2(0.5)** | **18.2(0.5)**       | 17.9(0.5)                        |
-| megafoneprimeIdPX\_21                              | **18.3(0.4)** | **18.3(0.4)**       | 18.0(0.5)                        |
-| retailHeroPreProcessedMinaDiscage                  | **0.9(0.3)**  | 0.8(0.4)                  | 0.7(0.4)                         |
-| retailHeroPreProcessedMinaDiscprimeage             | **0.8(0.4)**  | **0.8(0.4)**        | 0.7(0.4)                         |
-| retailHeroPreProcessedMinaDiscprimetransactionN... | 0.6(0.4)            | **0.7(0.4)**        | **0.7(0.4)**               |
-| retailHeroPreProcessedMinaDisctransactionNumber    | **0.9(0.4)**  | **0.9(0.3)**        | **0.9(0.4)**               |
-| syntheticDataRandomMinaUnequalY\_NOISEComb2        | **10.1(0.1)** | 9.9(0.1)                  | 9.8(0.1)                         |
-| syntheticDataRandomMinaUnequalY\_NOISEprimeComb2   | 9.9(0.2)            | 9.9(0.2)                  | **10.0(0.2)**              |
-| verysmallRateYNoisyv2Comb2                         | **12.2(1.2)** | 11.8(1.4)                 | 10.0(1.2)                        |
-| verysmallRateYNoisyv2primeComb2                    | 9.9(1.4)            | 10.8(1.3)                 | **11.6(1.2)**              |
 
 # 2 Model approach with Xgboost
 
@@ -422,7 +384,7 @@ A positive response is considered when the customer has made a purchase after be
 
 
 
-| {}                 | 2M\_Xgboost         | 2M\_Xgboost_wt1 | 2M\_Xgboost_wt2 |
+| {}                 | 2M_Xgboost         | 2M_Xgboost_wt1 | 2M_Xgboost_wt2 |
 |--------------------|---------------------|---------------------|----------------------------|
 | Criteo\_f2         | 6.6(1.7)            | **7.9(2.6)**  | 7.7(1.7)                   |
 | Criteo\_f2'        | 6.4(2.7)            | 6.9(2.2)            | **7.3(2.7)**         |
@@ -594,7 +556,7 @@ A positive response is considered when the customer has made a purchase after be
 
 
 
-| {}                                                 | SLearner            | SLearner_trtProb    | SLearner_trtProbXgboost |
+| {}                                                 | SLearner_LR            | SLearner_LR_wt1    | SLearner_LR_wt2 |
 |----------------------------------------------------|---------------------|---------------------|-------------------------|
 | SyntheticData\_zenodo\_20Kprimex10\_informative    | **0.1(2.2)**  | -0.1(2.1)           | -0.1(2.1)               |
 | SyntheticData\_zenodo\_20Kprimex31\_uplift\_inc... | **0.2(2.1)**  | 0.1(2.3)            | 0.1(2.0)                |
@@ -624,6 +586,42 @@ A positive response is considered when the customer has made a purchase after be
 | syntheticDataRandomMinaUnequalY\_NOISEprimeComb2   | **0.1(0.5)**  | -0.2(0.4)           | 0.0(0.3)                |
 | verysmallRateYNoisyv2Comb2                         | 0.6(1.6)            | 0.4(1.3)            | **0.8(1.4)**      |
 | verysmallRateYNoisyv2primeComb2                    | -1.0(1.6)           | **0.8(1.1)**  | 0.5(1.8)                |
+
+
+# Slearner with Xgboost
+
+
+
+| {}                                                 | SLearner_Xgboost   | SLearner_Xgboost_wt1 | SLearner_Xgboost_wt2 |
+|----------------------------------------------------|---------------------|---------------------------|----------------------------------|
+| SyntheticData\_zenodo\_20Kprimex10\_informative    | **11.8(2.1)** | 11.4(2.4)                 | 11.3(2.1)                        |
+| SyntheticData\_zenodo\_20Kprimex31\_uplift\_inc... | **11.1(2.1)** | 10.8(2.1)                 | 11.0(2.4)                        |
+| SyntheticData\_zenodo\_20Kx10\_informative         | **11.5(2.0)** | 11.4(2.4)                 | 11.1(2.2)                        |
+| SyntheticData\_zenodo\_20Kx31\_uplift\_increase    | **11.7(2.2)** | 10.9(1.8)                 | 11.1(2.1)                        |
+| criteoNewSample50kIdPf2                            | 8.0(1.9)            | 7.5(2.1)                  | **8.6(2.5)**               |
+| criteoNewSample50kIdPf8                            | **8.4(1.9)**  | **8.4(2.0)**        | **8.4(2.1)**               |
+| criteoNewSample50kprimeIdPf2                       | 6.2(2.7)            | **6.8(1.8)**        | 6.5(2.8)                         |
+| criteoNewSample50kprimeIdPf8                       | 6.9(2.1)            | **7.5(2.9)**        | 7.3(2.0)                         |
+| gerber\_Khiops\_NvsCDIdPp2002                      | -2.0(2.0)           | **-1.9(2.0)**       | -2.1(1.9)                        |
+| gerber\_Khiops\_NvsCDIdPp2004                      | -1.8(2.0)           | **-1.7(2.1)**       | -2.2(1.8)                        |
+| gerber\_Khiops\_NvsCDprimeIdPp2002                 | -1.9(2.2)           | -2.1(1.9)                 | **-1.7(1.7)**             |
+| gerber\_Khiops\_NvsCDprimeIdPp2004                 | -1.9(2.0)           | **-1.8(2.0)**       | **-1.8(2.3)**              |
+| hillstrom\_w\_Discmens                             | 2.5(2.7)            | 3.0(2.3)                  | **3.1(2.5)**               |
+| hillstrom\_w\_Discnewbie                           | **3.3(2.2)**  | 3.0(2.4)                  | 2.3(2.0)                         |
+| hillstrom\_w\_Discprimemens                        | **2.9(2.9)**  | 2.7(2.6)                  | 2.3(2.4)                         |
+| hillstrom\_w\_Discprimenewbie                      | 2.5(2.7)            | 2.6(2.5)                  | **3.7(2.4)**               |
+| megafoneIdPX\_16                                   | **17.9(0.4)** | **17.9(0.4)**       | 17.8(0.5)                        |
+| megafoneIdPX\_21                                   | 18.4(0.4)           | **18.5(0.4)**       | 18.2(0.5)                        |
+| megafoneprimeIdPX\_16                              | **18.2(0.5)** | **18.2(0.5)**       | 17.9(0.5)                        |
+| megafoneprimeIdPX\_21                              | **18.3(0.4)** | **18.3(0.4)**       | 18.0(0.5)                        |
+| retailHeroPreProcessedMinaDiscage                  | **0.9(0.3)**  | 0.8(0.4)                  | 0.7(0.4)                         |
+| retailHeroPreProcessedMinaDiscprimeage             | **0.8(0.4)**  | **0.8(0.4)**        | 0.7(0.4)                         |
+| retailHeroPreProcessedMinaDiscprimetransactionN... | 0.6(0.4)            | **0.7(0.4)**        | **0.7(0.4)**               |
+| retailHeroPreProcessedMinaDisctransactionNumber    | **0.9(0.4)**  | **0.9(0.3)**        | **0.9(0.4)**               |
+| syntheticDataRandomMinaUnequalY\_NOISEComb2        | **10.1(0.1)** | 9.9(0.1)                  | 9.8(0.1)                         |
+| syntheticDataRandomMinaUnequalY\_NOISEprimeComb2   | 9.9(0.2)            | 9.9(0.2)                  | **10.0(0.2)**              |
+| verysmallRateYNoisyv2Comb2                         | **12.2(1.2)** | 11.8(1.4)                 | 10.0(1.2)                        |
+| verysmallRateYNoisyv2primeComb2                    | 9.9(1.4)            | 10.8(1.3)                 | **11.6(1.2)**              |
 
 
 
