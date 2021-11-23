@@ -1,5 +1,66 @@
 # UpliftEvaluation_NRA
 
+## This repository contains the code of the paper : "Evaluation of Uplift Models with Non-Random Assignment Bias"
+
+You can find the code used to 1- generate biased samples   2- Treatment group reweighting with the class transformation approach, the 2 Model approach, S-Learner
+
+To execute the bias generation process with a dataset:
+
+1- The treatment and output columns should be binary (0 and 1) and named respectively : 'segment' and 'visit' <br />
+2- Datasets variables should be discretized <br />
+
+You can launch the process with the following command on a Linux machine:
+
+#### (For the bias generation process without domain adaptation for samples reweighting): <br />
+
+*ipython BiasGenAndReweighting.py DatasetFileName UpliftMethod X NoDA VAR_Name*    
+
+#### (For the bias generation process with the reweighting method "Ratio of gaussians"): <br />
+*ipython BiasGenAndReweighting.py DatasetFileName UpliftMethod X rg VAR_Name* 
+
+#### For the Uplift methods, you can use :  <br />
+1- KL [[2]](#2)<br /> 
+2- CTS [[3]](#3) <br /> 
+3- Chi [[2]](#2) <br />
+4- ED [[2]](#2)<br />
+5- 2M_LR (Two Model Approach with Logistic Regression)[[4]](#4) <br />
+6- 2M_Xgboost (Two Model Approach with Xgboost) [[4]](#4)<br />
+7- CT_Xgboost (Class Transformation Approach with Xgboost) [[5]](#5)<br />
+8- CT_LR (Class Transformation with Logistic Regression) [[5]](#5)<br />
+9- DR_LR
+10- DR_Xgboost
+11- XLearner_LR
+12- XLearner_Xgboost
+13- SLearner_LR
+14- SLearner_Xgboost
+
+#### For the *VAR_Name* you can use the variable name as it appears in the data, or to use "Comb" in order to generate bias using all the variables in the dataset
+
+## Datasets and Results
+In our study we used this code with the following datasets:
+
+- *Hillstrom* [[6]](#6): Marketing dataset with 64.000 lines in total. It
+contains two groups of treatments and a control group. The treatments are different marketing campaigns sent by mail, including advertisements of women's products (21.387 lines) or men's products (21.307 lines). The control group contains the individuals who did not receive a marketing campaign. A positive response is considered when the customer visits the website within two weeks after receiving the treatment (the e-mail).
+In the experiments, we used the treatment of the women's products campaign and the control group.
+
+- *Criteo* [[1]](#1): This database was created specifically for uplift prediction.
+It contains 14 million individuals, where one group of individuals was targeted by an advertising campaign and another randomly selected group that was not targeted by the campaign. The treatment rate is 85%, and a visit from the customer marks a positive response.
+A sample of 50.000 individuals was used.
+
+- *Gerber* [[10]](#10): A database where we can study political behavior and the effect of social pressure to vote. Mailings were sent randomly to voters
+to voters 11 days before an election in 2006. Voters who received
+Neighbors' messages constitute the treatment group. In contrast, individuals who received the 'Civic Duty' message are the control group. Positive Response is considered when the voter votes.
+
+- *Retail Hero* [[7]](#7): X5 sales group dataset that sends SMS messages to encourage people to buy more. The treatment group is the group of individuals who have been contacted by message, and the control group is the group that was not contacted.
+A positive response is considered when the customer has made a purchase after being contacted.
+
+- *Zenodo* [[8]](#8): a synthetic database containing trigonometric patterns specifically designed for uplift evaluation. We used a subset of 20,000 rows of data (data identified by the variable trial\_id = 1 and trial\_id = 2).
+
+- *Megafon* [[9]](#9): Synthetic database was created specifically for uplift prediction. Telecom companies generated it in order to reproduce the situations encountered them.
+
+- *Synth1* and *Synth2* : Provided in the repo.
+
+
 # Following are the results of the benchmark that demonstrate the behavior of several uplift methods when facing NRA bias on the datasets cited above :
 
 <p float="left">
