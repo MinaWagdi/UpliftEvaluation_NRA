@@ -1,5 +1,58 @@
 # UpliftEvaluation_NRA
 
+# Following are the results of the benchmark that demonstrate the behavior of several uplift methods when facing NRA bias on the datasets cited above :
+
+<p float="left">
+  <img src="FigsBench/GIT_REPO/Criteo_f2.png" width="310" />
+  <img src="FigsBench/GIT_REPO/Criteo_f2'.png" width="310" /> 
+  <img src="FigsBench/GIT_REPO/Criteo_f8'.png" width="310" />
+  </p>
+<p float="left">
+  <img src="FigsBench/GIT_REPO/Criteo_f8'.png" width="310" />
+  <img src="FigsBench/GIT_REPO/Gerber_p2002'.png" width="310" /> 
+  <img src="FigsBench/GIT_REPO/Gerber_p2004'.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="FigsBench/GIT_REPO/Gerber_p2004.png " width="310" />
+  <img src="FigsBench/GIT_REPO/Hillstrom_mens'.png" width="310" /> 
+  <img src="FigsBench/GIT_REPO/Hillstrom_mens.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="FigsBench/GIT_REPO/Hillstrom_newbie'.png" width="310" />
+  <img src="FigsBench/GIT_REPO/Hillstrom_newbie.png" width="310" /> 
+  <img src="FigsBench/GIT_REPO/Synth2'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="FigsBench/GIT_REPO/Synth2.png" width="310" />
+  <img src="FigsBench/GIT_REPO/megafone_X16'.png" width="310" /> 
+  <img src="FigsBench/GIT_REPO/megafone_X16.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="FigsBench/GIT_REPO/megafone_X21'.png" width="310" />
+  <img src="FigsBench/GIT_REPO/megafone_X21.png" width="310" /> 
+  <img src="FigsBench/GIT_REPO/retailHero_age'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="FigsBench/GIT_REPO/retailHero_age.png" width="310" />
+  <img src="FigsBench/GIT_REPO/retailHero_trNum'.png" width="310" /> 
+  <img src="FigsBench/GIT_REPO/retailHero_trNum.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="FigsBench/GIT_REPO/Synth1.png" width="310" />
+  <img src="FigsBench/GIT_REPO/Synth1'.png" width="310" /> 
+  <img src="FigsBench/GIT_REPO/zenodoSynth_X10'.png" width="310" />
+</p>
+<p float="left">
+  <img src="FigsBench/GIT_REPO/zenodoSynth_X10.png" width="310" />
+  <img src="FigsBench/GIT_REPO/zenodoSynth_X31'.png" width="310" /> 
+  <img src="FigsBench/GIT_REPO/zenodoSynth_X31.png" width="310" />
+</p>
 
 
 
