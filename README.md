@@ -1,7 +1,5 @@
 # UpliftEvaluation_NRA
 
-## This repository contains the code of the paper : "Evaluation of Uplift Models with Non-Random Assignment Bias"
-
 You can find the code used to 1- generate biased samples   2- Treatment group reweighting with the class transformation approach, the 2 Model approach, S-Learner
 
 To execute the bias generation process with a dataset:
