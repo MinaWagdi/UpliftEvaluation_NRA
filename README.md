@@ -27,12 +27,12 @@ You can launch the process with the following command on a Linux machine:
 6- 2M_Xgboost (Two Model Approach with Xgboost) [[4]](#4)<br />
 7- CT_Xgboost (Class Transformation Approach with Xgboost) [[5]](#5)<br />
 8- CT_LR (Class Transformation with Logistic Regression) [[5]](#5)<br />
-9- DR_LR
-10- DR_Xgboost
-11- XLearner_LR
-12- XLearner_Xgboost
-13- SLearner_LR
-14- SLearner_Xgboost
+9- DR_LR <br />
+10- DR_Xgboost <br />
+11- XLearner_LR <br />
+12- XLearner_Xgboost <br />
+13- SLearner_LR <br />
+14- SLearner_Xgboost <br />
 
 #### For the *VAR_Name* you can use the variable name as it appears in the data, or to use "Comb" in order to generate bias using all the variables in the dataset
 
@@ -265,7 +265,7 @@ A positive response is considered when the customer has made a purchase after be
 
 
 
-
+### The corresponding average qini values :
 
 | {}                 | CT_LR              | CT_LR_wt1      | CT_LR_wt2 |
 |--------------------|---------------------|---------------------|-----------------------|
@@ -300,7 +300,6 @@ A positive response is considered when the customer has made a purchase after be
 
 
 
-
 | {}                 | CT_Xgboost         | CT_Xgboost_wt1 | CT_Xgboost_wt2 |
 |--------------------|---------------------|---------------------|----------------------------|
 | Criteo\_f2         | 0.2(1.9)            | 2.6(1.8)            | **4.8(1.9)**        |
@@ -332,6 +331,7 @@ A positive response is considered when the customer has made a purchase after be
 | zenodoSynth\_X31   | 6.6(2.0)            | **7.2(2.5)** | 6.5(2.2)                   |
 | zenodoSynth\_X31'  | **9.2(2.0)**  | 7.9(2.3)            | 7.4(2.1)                   |
 
+# Slearner with Xgboost
 
 
 
@@ -366,7 +366,59 @@ A positive response is considered when the customer has made a purchase after be
 | verysmallRateYNoisyv2Comb2                         | **12.2(1.2)** | 11.8(1.4)                 | 10.0(1.2)                        |
 | verysmallRateYNoisyv2primeComb2                    | 9.9(1.4)            | 10.8(1.3)                 | **11.6(1.2)**              |
 
+# 2 Model approach with Xgboost
 
+<p float="left">
+  <img src="2MXgboost/Criteo_f2.png" width="310" />
+  <img src="2MXgboost/Criteo_f2'.png" width="310" /> 
+  <img src="2MXgboost/Criteo_f8'.png" width="310" />
+  </p>
+<p float="left">
+  <img src="2MXgboost/Criteo_f8'.png" width="310" />
+  <img src="2MXgboost/Gerber_p2002'.png" width="310" /> 
+  <img src="2MXgboost/Gerber_p2004'.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="2MXgboost/Gerber_p2004.png " width="310" />
+  <img src="2MXgboost/Hillstrom_mens'.png" width="310" /> 
+  <img src="2MXgboost/Hillstrom_mens.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MXgboost/Hillstrom_newbie'.png" width="310" />
+  <img src="2MXgboost/Hillstrom_newbie.png" width="310" /> 
+  <img src="2MXgboost/Synth2'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MXgboost/Synth2.png" width="310" />
+  <img src="2MXgboost/megafone_X16'.png" width="310" /> 
+  <img src="2MXgboost/megafone_X16.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MXgboost/megafone_X21'.png" width="310" />
+  <img src="2MXgboost/megafone_X21.png" width="310" /> 
+  <img src="2MXgboost/retailHero_age'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MXgboost/retailHero_age.png" width="310" />
+  <img src="2MXgboost/retailHero_trNum'.png" width="310" /> 
+  <img src="2MXgboost/retailHero_trNum.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="2MXgboost/Synth1.png" width="310" />
+  <img src="2MXgboost/Synth1'.png" width="310" /> 
+  <img src="2MXgboost/zenodoSynth_X10'.png" width="310" />
+</p>
+<p float="left">
+  <img src="2MXgboost/zenodoSynth_X10.png" width="310" />
+  <img src="2MXgboost/zenodoSynth_X31'.png" width="310" /> 
+  <img src="2MXgboost/zenodoSynth_X31.png" width="310" />
+</p>
 
 
 
@@ -402,7 +454,55 @@ A positive response is considered when the customer has made a purchase after be
 | zenodoSynth\_X31'  | **9.5(2.4)**  | 8.9(2.1)            | **9.5(1.9**)         |
 
 
+# 2 model approach with Logistic regression
 
+
+<p float="left">
+  <img src="2MLR/Criteo_f8'.png" width="310" />
+  <img src="2MLR/Gerber_p2002'.png" width="310" /> 
+  <img src="2MLR/Gerber_p2004'.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="2MLR/Gerber_p2004.png " width="310" />
+  <img src="2MLR/Hillstrom_mens'.png" width="310" /> 
+  <img src="2MLR/Hillstrom_mens.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MLR/Hillstrom_newbie'.png" width="310" />
+  <img src="2MLR/Hillstrom_newbie.png" width="310" /> 
+  <img src="2MLR/Synth2'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MLR/Synth2.png" width="310" />
+  <img src="2MLR/megafone_X16'.png" width="310" /> 
+  <img src="2MLR/megafone_X16.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MLR/megafone_X21'.png" width="310" />
+  <img src="2MLR/megafone_X21.png" width="310" /> 
+  <img src="2MLR/retailHero_age'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="2MLR/retailHero_age.png" width="310" />
+  <img src="2MLR/retailHero_trNum'.png" width="310" /> 
+  <img src="2MLR/retailHero_trNum.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="2MLR/Synth1.png" width="310" />
+  <img src="2MLR/Synth1'.png" width="310" /> 
+  <img src="2MLR/zenodoSynth_X10'.png" width="310" />
+</p>
+<p float="left">
+  <img src="2MLR/zenodoSynth_X10.png" width="310" />
+  <img src="2MLR/zenodoSynth_X31'.png" width="310" /> 
+  <img src="2MLR/zenodoSynth_X31.png" width="310" />
+</p>
 
 
 
@@ -437,38 +537,7 @@ A positive response is considered when the customer has made a purchase after be
 | zenodoSynth\_X31   | 12.2(2.0)           | **12.5(1.7)** | 12.0(2.0)           |
 | zenodoSynth\_X31'  | 12.2(1.8)           | 12.2(1.8)           | **12.6(1.8)** |
 
-
-
-| {}                                                 | SLearner            | SLearner_trtProb    | SLearner_trtProbXgboost |
-|----------------------------------------------------|---------------------|---------------------|-------------------------|
-| SyntheticData\_zenodo\_20Kprimex10\_informative    | **0.1(2.2)**  | -0.1(2.1)           | -0.1(2.1)               |
-| SyntheticData\_zenodo\_20Kprimex31\_uplift\_inc... | **0.2(2.1)**  | 0.1(2.3)            | 0.1(2.0)                |
-| SyntheticData\_zenodo\_20Kx10\_informative         | **0.0(2.5)**  | -0.1(2.2)           | **-0.0(2.1)**     |
-| SyntheticData\_zenodo\_20Kx31\_uplift\_increase    | **0.1(1.9)**  | **0.1(2.1)**  | **0.1(1.9)**      |
-| criteoNewSample50kIdPf2                            | -0.2(1.9)           | **-0.1(2.2)** | **-0.1(2.6)**     |
-| criteoNewSample50kIdPf8                            | -0.2(1.7)           | **-0.1(2.1)** | -0.3(2.5)               |
-| criteoNewSample50kprimeIdPf2                       | **-0.2(2.1)** | **-0.2(2.4)** | -0.6(2.3)               |
-| criteoNewSample50kprimeIdPf8                       | -0.4(1.9)           | **-0.0(2.4**) | -0.1(2.4)               |
-| gerber\_Khiops\_NvsCDIdPp2002                      | 0.1(0.9)            | **0.2(1.0)**  | -0.1(1.0)               |
-| gerber\_Khiops\_NvsCDIdPp2004                      | **0.0(1.1)**  | **0.0(1.0)**  | **0.0(1.0)**      |
-| gerber\_Khiops\_NvsCDprimeIdPp2002                 | -0.2(0.9)           | **-0.0(0.9)** | -0.1(1.0)               |
-| gerber\_Khiops\_NvsCDprimeIdPp2004                 | **0.1(1.1)**  | -0.2(1.0)           | -0.1(1.1)               |
-| hillstrom\_w\_Discmens                             | **0.2(2.4)**  | -0.1(2.1)           | 0.1(2.2)                |
-| hillstrom\_w\_Discnewbie                           | -0.1(2.4)           | **0.3(2.3)**  | -0.4(2.3)               |
-| hillstrom\_w\_Discprimemens                        | 0.0(2.2)            | 0.0(2.2)            | **0.1(2.1)**      |
-| hillstrom\_w\_Discprimenewbie                      | **0.2(2.4)**  | -0.2(2.5)           | 0.0(2.3)                |
-| megafoneIdPX\_16                                   | -0.0(0.6)           | **0.1(0.7)**  | 0.0(0.5)                |
-| megafoneIdPX\_21                                   | **-0.0(0.6)** | **0.0(0.5)**  | **0.0(0.5)**      |
-| megafoneprimeIdPX\_16                              | -0.1(0.5)           | **0.1(0.5)**  | 0.0(0.5)                |
-| megafoneprimeIdPX\_21                              | **0.0(0.5)**  | **0.0(0.5)**  | **0.0(0.5)**      |
-| retailHeroPreProcessedMinaDiscage                  | **-0.0(0.3)** | -0.1(0.4)           | -0.1(0.3)               |
-| retailHeroPreProcessedMinaDiscprimeage             | **-0.0(0.4)** | **0.0(0.3)**  | **-0.0(0.3)**     |
-| retailHeroPreProcessedMinaDiscprimetransactionN... | **0.0(0.3)  | **-0.0(0.4)** | **-0.0(0.4)**     |
-| retailHeroPreProcessedMinaDisctransactionNumber    | **-0.0(0.4)** | **0.0(0.4)**  | **0.0(0.3)**      |
-| syntheticDataRandomMinaUnequalY\_NOISEComb2        | -0.1(0.4)           | **-0.0(0.4)** | **0.0(0.4)**      |
-| syntheticDataRandomMinaUnequalY\_NOISEprimeComb2   | **0.1(0.5)**  | -0.2(0.4)           | 0.0(0.3)                |
-| verysmallRateYNoisyv2Comb2                         | 0.6(1.6)            | 0.4(1.3)            | **0.8(1.4)**      |
-| verysmallRateYNoisyv2primeComb2                    | -1.0(1.6)           | **0.8(1.1)**  | 0.5(1.8)                |
+# Slearner with Logistic Regression
 
 
 <p float="left">
@@ -525,105 +594,39 @@ A positive response is considered when the customer has made a purchase after be
 
 
 
-<p float="left">
-  <img src="2MLR/Criteo_f8'.png" width="310" />
-  <img src="2MLR/Gerber_p2002'.png" width="310" /> 
-  <img src="2MLR/Gerber_p2004'.png " width="310" />
-</p>
-
-<p float="left">
-  <img src="2MLR/Gerber_p2004.png " width="310" />
-  <img src="2MLR/Hillstrom_mens'.png" width="310" /> 
-  <img src="2MLR/Hillstrom_mens.png" width="310" />
-</p>
-
-<p float="left">
-  <img src="2MLR/Hillstrom_newbie'.png" width="310" />
-  <img src="2MLR/Hillstrom_newbie.png" width="310" /> 
-  <img src="2MLR/Synth2'.png" width="310" />
-</p>
-
-<p float="left">
-  <img src="2MLR/Synth2.png" width="310" />
-  <img src="2MLR/megafone_X16'.png" width="310" /> 
-  <img src="2MLR/megafone_X16.png" width="310" />
-</p>
-
-<p float="left">
-  <img src="2MLR/megafone_X21'.png" width="310" />
-  <img src="2MLR/megafone_X21.png" width="310" /> 
-  <img src="2MLR/retailHero_age'.png" width="310" />
-</p>
-
-<p float="left">
-  <img src="2MLR/retailHero_age.png" width="310" />
-  <img src="2MLR/retailHero_trNum'.png" width="310" /> 
-  <img src="2MLR/retailHero_trNum.png " width="310" />
-</p>
-
-<p float="left">
-  <img src="2MLR/Synth1.png" width="310" />
-  <img src="2MLR/Synth1'.png" width="310" /> 
-  <img src="2MLR/zenodoSynth_X10'.png" width="310" />
-</p>
-<p float="left">
-  <img src="2MLR/zenodoSynth_X10.png" width="310" />
-  <img src="2MLR/zenodoSynth_X31'.png" width="310" /> 
-  <img src="2MLR/zenodoSynth_X31.png" width="310" />
-</p>
+| {}                                                 | SLearner            | SLearner_trtProb    | SLearner_trtProbXgboost |
+|----------------------------------------------------|---------------------|---------------------|-------------------------|
+| SyntheticData\_zenodo\_20Kprimex10\_informative    | **0.1(2.2)**  | -0.1(2.1)           | -0.1(2.1)               |
+| SyntheticData\_zenodo\_20Kprimex31\_uplift\_inc... | **0.2(2.1)**  | 0.1(2.3)            | 0.1(2.0)                |
+| SyntheticData\_zenodo\_20Kx10\_informative         | **0.0(2.5)**  | -0.1(2.2)           | **-0.0(2.1)**     |
+| SyntheticData\_zenodo\_20Kx31\_uplift\_increase    | **0.1(1.9)**  | **0.1(2.1)**  | **0.1(1.9)**      |
+| criteoNewSample50kIdPf2                            | -0.2(1.9)           | **-0.1(2.2)** | **-0.1(2.6)**     |
+| criteoNewSample50kIdPf8                            | -0.2(1.7)           | **-0.1(2.1)** | -0.3(2.5)               |
+| criteoNewSample50kprimeIdPf2                       | **-0.2(2.1)** | **-0.2(2.4)** | -0.6(2.3)               |
+| criteoNewSample50kprimeIdPf8                       | -0.4(1.9)           | **-0.0(2.4**) | -0.1(2.4)               |
+| gerber\_Khiops\_NvsCDIdPp2002                      | 0.1(0.9)            | **0.2(1.0)**  | -0.1(1.0)               |
+| gerber\_Khiops\_NvsCDIdPp2004                      | **0.0(1.1)**  | **0.0(1.0)**  | **0.0(1.0)**      |
+| gerber\_Khiops\_NvsCDprimeIdPp2002                 | -0.2(0.9)           | **-0.0(0.9)** | -0.1(1.0)               |
+| gerber\_Khiops\_NvsCDprimeIdPp2004                 | **0.1(1.1)**  | -0.2(1.0)           | -0.1(1.1)               |
+| hillstrom\_w\_Discmens                             | **0.2(2.4)**  | -0.1(2.1)           | 0.1(2.2)                |
+| hillstrom\_w\_Discnewbie                           | -0.1(2.4)           | **0.3(2.3)**  | -0.4(2.3)               |
+| hillstrom\_w\_Discprimemens                        | 0.0(2.2)            | 0.0(2.2)            | **0.1(2.1)**      |
+| hillstrom\_w\_Discprimenewbie                      | **0.2(2.4)**  | -0.2(2.5)           | 0.0(2.3)                |
+| megafoneIdPX\_16                                   | -0.0(0.6)           | **0.1(0.7)**  | 0.0(0.5)                |
+| megafoneIdPX\_21                                   | **-0.0(0.6)** | **0.0(0.5)**  | **0.0(0.5)**      |
+| megafoneprimeIdPX\_16                              | -0.1(0.5)           | **0.1(0.5)**  | 0.0(0.5)                |
+| megafoneprimeIdPX\_21                              | **0.0(0.5)**  | **0.0(0.5)**  | **0.0(0.5)**      |
+| retailHeroPreProcessedMinaDiscage                  | **-0.0(0.3)** | -0.1(0.4)           | -0.1(0.3)               |
+| retailHeroPreProcessedMinaDiscprimeage             | **-0.0(0.4)** | **0.0(0.3)**  | **-0.0(0.3)**     |
+| retailHeroPreProcessedMinaDiscprimetransactionN... | **0.0(0.3)  | **-0.0(0.4)** | **-0.0(0.4)**     |
+| retailHeroPreProcessedMinaDisctransactionNumber    | **-0.0(0.4)** | **0.0(0.4)**  | **0.0(0.3)**      |
+| syntheticDataRandomMinaUnequalY\_NOISEComb2        | -0.1(0.4)           | **-0.0(0.4)** | **0.0(0.4)**      |
+| syntheticDataRandomMinaUnequalY\_NOISEprimeComb2   | **0.1(0.5)**  | -0.2(0.4)           | 0.0(0.3)                |
+| verysmallRateYNoisyv2Comb2                         | 0.6(1.6)            | 0.4(1.3)            | **0.8(1.4)**      |
+| verysmallRateYNoisyv2primeComb2                    | -1.0(1.6)           | **0.8(1.1)**  | 0.5(1.8)                |
 
 
 
-<p float="left">
-  <img src="2MXgboost/Criteo_f2.png" width="310" />
-  <img src="2MXgboost/Criteo_f2'.png" width="310" /> 
-  <img src="2MXgboost/Criteo_f8'.png" width="310" />
-  </p>
-<p float="left">
-  <img src="2MXgboost/Criteo_f8'.png" width="310" />
-  <img src="2MXgboost/Gerber_p2002'.png" width="310" /> 
-  <img src="2MXgboost/Gerber_p2004'.png " width="310" />
-</p>
 
-<p float="left">
-  <img src="2MXgboost/Gerber_p2004.png " width="310" />
-  <img src="2MXgboost/Hillstrom_mens'.png" width="310" /> 
-  <img src="2MXgboost/Hillstrom_mens.png" width="310" />
-</p>
-
-<p float="left">
-  <img src="2MXgboost/Hillstrom_newbie'.png" width="310" />
-  <img src="2MXgboost/Hillstrom_newbie.png" width="310" /> 
-  <img src="2MXgboost/Synth2'.png" width="310" />
-</p>
-
-<p float="left">
-  <img src="2MXgboost/Synth2.png" width="310" />
-  <img src="2MXgboost/megafone_X16'.png" width="310" /> 
-  <img src="2MXgboost/megafone_X16.png" width="310" />
-</p>
-
-<p float="left">
-  <img src="2MXgboost/megafone_X21'.png" width="310" />
-  <img src="2MXgboost/megafone_X21.png" width="310" /> 
-  <img src="2MXgboost/retailHero_age'.png" width="310" />
-</p>
-
-<p float="left">
-  <img src="2MXgboost/retailHero_age.png" width="310" />
-  <img src="2MXgboost/retailHero_trNum'.png" width="310" /> 
-  <img src="2MXgboost/retailHero_trNum.png " width="310" />
-</p>
-
-<p float="left">
-  <img src="2MXgboost/Synth1.png" width="310" />
-  <img src="2MXgboost/Synth1'.png" width="310" /> 
-  <img src="2MXgboost/zenodoSynth_X10'.png" width="310" />
-</p>
-<p float="left">
-  <img src="2MXgboost/zenodoSynth_X10.png" width="310" />
-  <img src="2MXgboost/zenodoSynth_X31'.png" width="310" /> 
-  <img src="2MXgboost/zenodoSynth_X31.png" width="310" />
-</p>
 
 
