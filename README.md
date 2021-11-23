@@ -335,3 +335,36 @@ A positive response is considered when the customer has made a purchase after be
 
 
 
+| {}                                                 | SLearner\_Xgboost   | SLearner\_Xgboost_trtProb | SLearner\_Xgboost_trtProbXgboost |
+|----------------------------------------------------|---------------------|---------------------------|----------------------------------|
+| SyntheticData\_zenodo\_20Kprimex10\_informative    | **11.8(2.1)** | 11.4(2.4)                 | 11.3(2.1)                        |
+| SyntheticData\_zenodo\_20Kprimex31\_uplift\_inc... | **11.1(2.1)** | 10.8(2.1)                 | 11.0(2.4)                        |
+| SyntheticData\_zenodo\_20Kx10\_informative         | **11.5(2.0)** | 11.4(2.4)                 | 11.1(2.2)                        |
+| SyntheticData\_zenodo\_20Kx31\_uplift\_increase    | **11.7(2.2)** | 10.9(1.8)                 | 11.1(2.1)                        |
+| criteoNewSample50kIdPf2                            | 8.0(1.9)            | 7.5(2.1)                  | **8.6(2.5)**               |
+| criteoNewSample50kIdPf8                            | **8.4(1.9)**  | **8.4(2.0)**        | **8.4(2.1)**               |
+| criteoNewSample50kprimeIdPf2                       | 6.2(2.7)            | **6.8(1.8)**        | 6.5(2.8)                         |
+| criteoNewSample50kprimeIdPf8                       | 6.9(2.1)            | **7.5(2.9)**        | 7.3(2.0)                         |
+| gerber\_Khiops\_NvsCDIdPp2002                      | -2.0(2.0)           | **-1.9(2.0)**       | -2.1(1.9)                        |
+| gerber\_Khiops\_NvsCDIdPp2004                      | -1.8(2.0)           | **-1.7(2.1)**       | -2.2(1.8)                        |
+| gerber\_Khiops\_NvsCDprimeIdPp2002                 | -1.9(2.2)           | -2.1(1.9)                 | **-1.7(1.7)**             |
+| gerber\_Khiops\_NvsCDprimeIdPp2004                 | -1.9(2.0)           | **-1.8(2.0)**       | **-1.8(2.3)**              |
+| hillstrom\_w\_Discmens                             | 2.5(2.7)            | 3.0(2.3)                  | **3.1(2.5)**               |
+| hillstrom\_w\_Discnewbie                           | **3.3(2.2)**  | 3.0(2.4)                  | 2.3(2.0)                         |
+| hillstrom\_w\_Discprimemens                        | **2.9(2.9)**  | 2.7(2.6)                  | 2.3(2.4)                         |
+| hillstrom\_w\_Discprimenewbie                      | 2.5(2.7)            | 2.6(2.5)                  | **3.7(2.4)**               |
+| megafoneIdPX\_16                                   | **17.9(0.4)** | **17.9(0.4)**       | 17.8(0.5)                        |
+| megafoneIdPX\_21                                   | 18.4(0.4)           | **18.5(0.4)**       | 18.2(0.5)                        |
+| megafoneprimeIdPX\_16                              | **18.2(0.5)** | **18.2(0.5)**       | 17.9(0.5)                        |
+| megafoneprimeIdPX\_21                              | **18.3(0.4)** | **18.3(0.4)**       | 18.0(0.5)                        |
+| retailHeroPreProcessedMinaDiscage                  | **0.9(0.3)**  | 0.8(0.4)                  | 0.7(0.4)                         |
+| retailHeroPreProcessedMinaDiscprimeage             | **0.8(0.4)**  | **0.8(0.4)**        | 0.7(0.4)                         |
+| retailHeroPreProcessedMinaDiscprimetransactionN... | 0.6(0.4)            | **0.7(0.4)**        | **0.7(0.4)**               |
+| retailHeroPreProcessedMinaDisctransactionNumber    | **0.9(0.4)**  | **0.9(0.3)**        | **0.9(0.4)**               |
+| syntheticDataRandomMinaUnequalY\_NOISEComb2        | **10.1(0.1)** | 9.9(0.1)                  | 9.8(0.1)                         |
+| syntheticDataRandomMinaUnequalY\_NOISEprimeComb2   | 9.9(0.2)            | 9.9(0.2)                  | **10.0(0.2)**              |
+| verysmallRateYNoisyv2Comb2                         | **12.2(1.2)** | 11.8(1.4)                 | 10.0(1.2)                        |
+| verysmallRateYNoisyv2primeComb2                    | 9.9(1.4)            | 10.8(1.3)                 | **11.6(1.2)**              |
+
+
+
