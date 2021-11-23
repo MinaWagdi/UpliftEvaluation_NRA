@@ -93,6 +93,116 @@
 
 
 
+## Following are the results of the treatment samples reweighting for the class transformation approach (with Logistic regression and Xgboost):
+*The reweighted method is marked in orange and the standard method in blue*
+
+
+<p float="left">
+  <img src="CT_Xgboost_weighted/CTXGboost2/Criteo_f2.png" width="310" />
+  <img src="CT_Xgboost_weighted/CTXGboost2/Criteo_f2'.png" width="310" /> 
+  <img src="CT_Xgboost_weighted/CTXGboost2/Criteo_f8'.png" width="310" />
+  </p>
+<p float="left">
+  <img src="CT_Xgboost_weighted/CTXGboost2/Criteo_f8.png" width="310" />
+  <img src="CT_Xgboost_weighted/CTXGboost2/Gerber_p2002'.png" width="310" /> 
+  <img src="CT_Xgboost_weighted/CTXGboost2/Gerber_p2004'.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_Xgboost_weighted/CTXGboost2/Gerber_p2004.png " width="310" />
+  <img src="CT_Xgboost_weighted/CTXGboost2/Hillstrom_mens'.png" width="310" /> 
+  <img src="CT_Xgboost_weighted/CTXGboost2/Hillstrom_mens.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_Xgboost_weighted/CTXGboost2/Hillstrom_newbie'.png" width="310" />
+  <img src="CT_Xgboost_weighted/CTXGboost2/Hillstrom_newbie.png" width="310" /> 
+  <img src="CT_Xgboost_weighted/CTXGboost2/Synth2'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_Xgboost_weighted/CTXGboost2/Synth2.png" width="310" />
+  <img src="CT_Xgboost_weighted/CTXGboost2/megafone_X16'.png" width="310" /> 
+  <img src="CT_Xgboost_weighted/CTXGboost2/megafone_X16.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_Xgboost_weighted/CTXGboost2/megafone_X21'.png" width="310" />
+  <img src="CT_Xgboost_weighted/CTXGboost2/megafone_X21.png" width="310" /> 
+  <img src="CT_Xgboost_weighted/CTXGboost2/retailHero_age'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_Xgboost_weighted/CTXGboost2/retailHero_age.png" width="310" />
+  <img src="CT_Xgboost_weighted/CTXGboost2/retailHero_trNum'.png" width="310" /> 
+  <img src="CT_Xgboost_weighted/CTXGboost2/retailHero_trNum.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_Xgboost_weighted/CTXGboost2/Synth1.png" width="310" />
+  <img src="CT_Xgboost_weighted/CTXGboost2/Synth1'.png" width="310" /> 
+  <img src="CT_Xgboost_weighted/CTXGboost2/zenodoSynth_X10'.png" width="310" />
+</p>
+<p float="left">
+  <img src="CT_Xgboost_weighted/CTXGboost2/zenodoSynth_X10.png" width="310" />
+  <img src="CT_Xgboost_weighted/CTXGboost2/zenodoSynth_X31'.png" width="310" /> 
+  <img src="CT_Xgboost_weighted/CTXGboost2/zenodoSynth_X31.png" width="310" />
+</p>
+
+
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/Criteo_f2.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/Criteo_f2'.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/Criteo_f8'.png" width="310" />
+  </p>
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/Criteo_f8.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/Gerber_p2002'.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/Gerber_p2004'.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/Gerber_p2004.png " width="310" />
+  <img src="CT_LR_weighted/CTLR2/Hillstrom_mens'.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/Hillstrom_mens.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/Hillstrom_newbie'.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/Hillstrom_newbie.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/Synth2'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/Synth2.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/megafone_X16'.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/megafone_X16.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/megafone_X21'.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/megafone_X21.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/retailHero_age'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/retailHero_age.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/retailHero_trNum'.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/retailHero_trNum.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/Synth1.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/Synth1'.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/zenodoSynth_X10'.png" width="310" />
+</p>
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/zenodoSynth_X10.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/zenodoSynth_X31'.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/zenodoSynth_X31.png" width="310" />
+</p>
+
+
 
 
 
