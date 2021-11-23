@@ -436,3 +436,36 @@ A positive response is considered when the customer has made a purchase after be
 | zenodoSynth\_X10'  | **12.6(1.8)** | 12.3(1.5)           | 12.4(1.7)           |
 | zenodoSynth\_X31   | 12.2(2.0)           | **12.5(1.7)** | 12.0(2.0)           |
 | zenodoSynth\_X31'  | 12.2(1.8)           | 12.2(1.8)           | **12.6(1.8)** |
+
+
+
+| {}                                                 | SLearner            | SLearner_trtProb    | SLearner_trtProbXgboost |
+|----------------------------------------------------|---------------------|---------------------|-------------------------|
+| SyntheticData\_zenodo\_20Kprimex10\_informative    | **0.1(2.2)**  | -0.1(2.1)           | -0.1(2.1)               |
+| SyntheticData\_zenodo\_20Kprimex31\_uplift\_inc... | **0.2(2.1)**  | 0.1(2.3)            | 0.1(2.0)                |
+| SyntheticData\_zenodo\_20Kx10\_informative         | **0.0(2.5)**  | -0.1(2.2)           | **-0.0(2.1)**     |
+| SyntheticData\_zenodo\_20Kx31\_uplift\_increase    | **0.1(1.9)**  | **0.1(2.1)**  | **0.1(1.9)**      |
+| criteoNewSample50kIdPf2                            | -0.2(1.9)           | **-0.1(2.2)** | **-0.1(2.6)**     |
+| criteoNewSample50kIdPf8                            | -0.2(1.7)           | **-0.1(2.1)** | -0.3(2.5)               |
+| criteoNewSample50kprimeIdPf2                       | **-0.2(2.1)** | **-0.2(2.4)** | -0.6(2.3)               |
+| criteoNewSample50kprimeIdPf8                       | -0.4(1.9)           | **-0.0(2.4**) | -0.1(2.4)               |
+| gerber\_Khiops\_NvsCDIdPp2002                      | 0.1(0.9)            | **0.2(1.0)**  | -0.1(1.0)               |
+| gerber\_Khiops\_NvsCDIdPp2004                      | **0.0(1.1)**  | **0.0(1.0)**  | **0.0(1.0)**      |
+| gerber\_Khiops\_NvsCDprimeIdPp2002                 | -0.2(0.9)           | **-0.0(0.9)** | -0.1(1.0)               |
+| gerber\_Khiops\_NvsCDprimeIdPp2004                 | **0.1(1.1)**  | -0.2(1.0)           | -0.1(1.1)               |
+| hillstrom\_w\_Discmens                             | **0.2(2.4)**  | -0.1(2.1)           | 0.1(2.2)                |
+| hillstrom\_w\_Discnewbie                           | -0.1(2.4)           | **0.3(2.3)**  | -0.4(2.3)               |
+| hillstrom\_w\_Discprimemens                        | 0.0(2.2)            | 0.0(2.2)            | **0.1(2.1)**      |
+| hillstrom\_w\_Discprimenewbie                      | **0.2(2.4)**  | -0.2(2.5)           | 0.0(2.3)                |
+| megafoneIdPX\_16                                   | -0.0(0.6)           | **0.1(0.7)**  | 0.0(0.5)                |
+| megafoneIdPX\_21                                   | **-0.0(0.6)** | **0.0(0.5)**  | **0.0(0.5)**      |
+| megafoneprimeIdPX\_16                              | -0.1(0.5)           | **0.1(0.5)**  | 0.0(0.5)                |
+| megafoneprimeIdPX\_21                              | **0.0(0.5)**  | **0.0(0.5)**  | **0.0(0.5)**      |
+| retailHeroPreProcessedMinaDiscage                  | **-0.0(0.3)** | -0.1(0.4)           | -0.1(0.3)               |
+| retailHeroPreProcessedMinaDiscprimeage             | **-0.0(0.4)** | **0.0(0.3)**  | **-0.0(0.3)**     |
+| retailHeroPreProcessedMinaDiscprimetransactionN... | **0.0(0.3)  | **-0.0(0.4)** | **-0.0(0.4)**     |
+| retailHeroPreProcessedMinaDisctransactionNumber    | **-0.0(0.4)** | **0.0(0.4)**  | **0.0(0.3)**      |
+| syntheticDataRandomMinaUnequalY\_NOISEComb2        | -0.1(0.4)           | **-0.0(0.4)** | **0.0(0.4)**      |
+| syntheticDataRandomMinaUnequalY\_NOISEprimeComb2   | **0.1(0.5)**  | -0.2(0.4)           | 0.0(0.3)                |
+| verysmallRateYNoisyv2Comb2                         | 0.6(1.6)            | 0.4(1.3)            | **0.8(1.4)**      |
+| verysmallRateYNoisyv2primeComb2                    | -1.0(1.6)           | **0.8(1.1)**  | 0.5(1.8)                |
