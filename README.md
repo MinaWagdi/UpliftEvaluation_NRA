@@ -56,7 +56,7 @@ A positive response is considered when the customer has made a purchase after be
 
 - *Megafon* [[9]](#9): Synthetic database was created specifically for uplift prediction. Telecom companies generated it in order to reproduce the situations encountered them.
 
-- *Synth1* and *Synth2* : Provided in the repo.
+- *Synth1* and *Synth2* : (Provided in the repo.) 2 synthetic datasets that we have built as a 2D grid of size 10x10 in which each cell corresponds to a particular uplift drawn at random.
 
 # Results
 ## Following are the results of the benchmark that demonstrate the behavior of several uplift methods when facing NRA bias on the datasets cited above :
