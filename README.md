@@ -622,6 +622,58 @@ A positive response is considered when the customer has made a purchase after be
 | verysmallRateYNoisyv2primeComb2                    | 9.9(1.4)            | 10.8(1.3)                 | **11.6(1.2)**              |
 
 
+<p float="left">
+  <img src="slearnerxgboost/Slearner_Xgboost/Criteo_f2.png" width="310" />
+  <img src="slearnerxgboost/Slearner_Xgboost/Criteo_f2'.png" width="310" /> 
+  <img src="slearnerxgboost/Slearner_Xgboost/Criteo_f8'.png" width="310" />
+  </p>
+<p float="left">
+  <img src="slearnerxgboost/Slearner_Xgboost/Criteo_f8'.png" width="310" />
+  <img src="slearnerxgboost/Slearner_Xgboost/Gerber_p2002'.png" width="310" /> 
+  <img src="slearnerxgboost/Slearner_Xgboost/Gerber_p2004'.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="slearnerxgboost/Slearner_Xgboost/Gerber_p2004.png " width="310" />
+  <img src="slearnerxgboost/Slearner_Xgboost/Hillstrom_mens'.png" width="310" /> 
+  <img src="slearnerxgboost/Slearner_Xgboost/Hillstrom_mens.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="slearnerxgboost/Slearner_Xgboost/Hillstrom_newbie'.png" width="310" />
+  <img src="slearnerxgboost/Slearner_Xgboost/Hillstrom_newbie.png" width="310" /> 
+  <img src="slearnerxgboost/Slearner_Xgboost/Synth2'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="slearnerxgboost/Slearner_Xgboost/Synth2.png" width="310" />
+  <img src="slearnerxgboost/Slearner_Xgboost/megafone_X16'.png" width="310" /> 
+  <img src="slearnerxgboost/Slearner_Xgboost/megafone_X16.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="slearnerxgboost/Slearner_Xgboost/megafone_X21'.png" width="310" />
+  <img src="slearnerxgboost/Slearner_Xgboost/megafone_X21.png" width="310" /> 
+  <img src="slearnerxgboost/Slearner_Xgboost/retailHero_age'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="slearnerxgboost/Slearner_Xgboost/retailHero_age.png" width="310" />
+  <img src="slearnerxgboost/Slearner_Xgboost/retailHero_trNum'.png" width="310" /> 
+  <img src="slearnerxgboost/Slearner_Xgboost/retailHero_trNum.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="slearnerxgboost/Slearner_Xgboost/Synth1.png" width="310" />
+  <img src="slearnerxgboost/Slearner_Xgboost/Synth1'.png" width="310" /> 
+  <img src="slearnerxgboost/Slearner_Xgboost/zenodoSynth_X10'.png" width="310" />
+</p>
+<p float="left">
+  <img src="slearnerxgboost/Slearner_Xgboost/zenodoSynth_X10.png" width="310" />
+  <img src="slearnerxgboost/Slearner_Xgboost/zenodoSynth_X31'.png" width="310" /> 
+  <img src="slearnerxgboost/Slearner_Xgboost/zenodoSynth_X31.png" width="310" />
+</p>
+
 
 
 
