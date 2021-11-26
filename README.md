@@ -25,12 +25,12 @@ You can launch the process with the following command on a Linux machine:
 6- 2M_Xgboost (Two Model Approach with Xgboost) [[4]](#4)<br />
 7- CT_Xgboost (Class Transformation Approach with Xgboost) [[5]](#5)<br />
 8- CT_LR (Class Transformation with Logistic Regression) [[5]](#5)<br />
-9- DR_LinR <br /> Doubly Robust Learner with Linear regression
-10- DR_Xgboost <br /> Doubly Robust Learner with Xgboost
-11- XLearner_LinR <br /> XLearner with Linear regression
-12- XLearner_Xgboost <br /> XLearner with Xgboost
-13- SLearner_LinR <br /> SLearner with Linear regression
-14- SLearner_Xgboost <br /> SLearner with Xgboost
+9- DR_LinR Doubly Robust Learner with Linear regression <br /> 
+10- DR_Xgboost Doubly Robust Learner with Xgboost<br /> 
+11- XLearner_LinR XLearner with Linear regression<br /> 
+12- XLearner_Xgboost XLearner with Xgboost<br /> 
+13- SLearner_LinR SLearner with Linear regression<br /> 
+14- SLearner_Xgboost SLearner with Xgboost<br /> 
 
 #### For the *VAR_Name* you can use the variable name as it appears in the data, or to use "Comb" in order to generate bias using all the variables in the dataset
 
