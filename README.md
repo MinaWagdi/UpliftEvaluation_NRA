@@ -25,12 +25,12 @@ You can launch the process with the following command on a Linux machine:
 6- 2M_Xgboost (Two Model Approach with Xgboost) [[4]](#4)<br />
 7- CT_Xgboost (Class Transformation Approach with Xgboost) [[5]](#5)<br />
 8- CT_LR (Class Transformation with Logistic Regression) [[5]](#5)<br />
-9- DR_LR <br />
-10- DR_Xgboost <br />
-11- XLearner_LR <br />
-12- XLearner_Xgboost <br />
-13- SLearner_LR <br />
-14- SLearner_Xgboost <br />
+9- DR_LinR <br /> Doubly Robust Learner with Linear regression
+10- DR_Xgboost <br /> Doubly Robust Learner with Xgboost
+11- XLearner_LinR <br /> XLearner with Linear regression
+12- XLearner_Xgboost <br /> XLearner with Xgboost
+13- SLearner_LinR <br /> SLearner with Linear regression
+14- SLearner_Xgboost <br /> SLearner with Xgboost
 
 #### For the *VAR_Name* you can use the variable name as it appears in the data, or to use "Comb" in order to generate bias using all the variables in the dataset
 
@@ -63,7 +63,7 @@ A positive response is considered when the customer has made a purchase after be
 
 
 
-| {}                 | 2M\_Xgboost         | 2M_LR               | CT_Xgboost | CT_LR | DR_Xgboost         | DR_LR              | XLearner_Xgboost            | XLearner_LR        | SLearner_LR  | SLearner_Xgboost   | KL                  | ED                  | CTS       |
+| {}                 | 2M\_Xgboost         | 2M_LR               | CT_Xgboost | CT_LR | DR_Xgboost         | DR_LinR              | XLearner_Xgboost            | XLearner_LinR        | SLearner_LinR  | SLearner_Xgboost   | KL                  | ED                  | CTS       |
 |--------------------|---------------------|--------------------|-------------|---------------------|---------------------|---------------------|---------------------|---------------------|-----------|---------------------|---------------------|---------------------|-----------|
 | Criteo\_f2         | 6.6(1.7)            | 7.2(1.6)           | 0.2(1.9)    | 1.9(1.2)            | 4.4(2.8)            | **9.9(0.9)**  | 5.5(2.6)            | 8.5(0.8)            | -0.2(1.9) | 8.0(1.9)            | 0.6(1.4)            | 4.9(1.3)            | 2.1(1.5)  |
 | Criteo\_f2'        | 6.4(2.7)            | 10.1(1.4)          | 6.9(2.0)    | 7.6(1.4)            | 4.4(2.7)            | 10.3(1.6)           | 4.1(2.1)            | **11.1(1.0)** | -0.2(2.1) | 6.2(2.7)            | 10.3(1.2)           | 11.0(1.2)           | 10.5(1.3) |
@@ -506,7 +506,7 @@ A positive response is considered when the customer has made a purchase after be
 # Slearner with Logistic Regression
 
 
-| {}                                                 | SLearner_LR            | SLearner_LR_wt1    | SLearner_LR_wt2 |
+| {}                                                 | SLearner_LinR            | SLearner_LR_wt1    | SLearner_LR_wt2 |
 |----------------------------------------------------|---------------------|---------------------|-------------------------|
 | SyntheticData\_zenodo\_20Kprimex10\_informative    | **0.1(2.2)**  | -0.1(2.1)           | -0.1(2.1)               |
 | SyntheticData\_zenodo\_20Kprimex31\_uplift\_inc... | **0.2(2.1)**  | 0.1(2.3)            | 0.1(2.0)                |
