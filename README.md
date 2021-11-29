@@ -11,10 +11,10 @@ You can launch the process with the following command on a Linux machine:
 
 #### (For the bias generation process without domain adaptation for samples reweighting): <br />
 
-*ipython BiasGenAndReweighting.py DatasetFileName UpliftMethod X NoDA VAR_Name*    
+*ipython main.py DatasetFileName UpliftMethod X NoDA VAR_Name*    
 
 #### (For the bias generation process with the reweighting method "Ratio of gaussians"): <br />
-*ipython BiasGenAndReweighting.py DatasetFileName UpliftMethod X rg VAR_Name* 
+*ipython main.py DatasetFileName UpliftMethod X rg VAR_Name* 
 
 #### For the Uplift methods, you can use :  <br />
 1- KL [[2]](#2)<br /> 
