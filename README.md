@@ -593,7 +593,7 @@ A positive response is considered when the customer has made a purchase after be
 
 
 
-# Slearner with Xgboost
+# Slearner with Linear regression
 
 
 
