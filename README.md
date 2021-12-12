@@ -154,6 +154,92 @@ A positive response is considered when the customer has made a purchase after be
 ## Following are the results of the treatment samples reweighting
 *The reweighted methods are marked in green and orange while the method w/o reweighting in blue*
 
+### Class Transformation with LR
+
+
+| {}                 | CT_LR              | CT_LR_wt1      | CT_LR_wt2 |
+|--------------------|---------------------|---------------------|-----------------------|
+| Criteo\_f2         | 1.9(1.2)            | 6.1(1.5)            | **8.2(2.0)**    |
+| Criteo\_f2'        | 7.6(1.4)            | **7.7(2.9)**  | 7.2(2.1)              |
+| Criteo\_f8         | 1.7(1.0)            | 5.5(1.8)            | **7.9(1.7)    |
+| Criteo\_f8'        | -2.0(1.3)           | 6.1(1.4)            | **7.3(2.0)**    |
+| Gerber\_p2002      | -0.4(1.2)           | **0.9(1.1)**  | 0.5(1.2)              |
+| Gerber\_p2002'     | 1.0(1.1)            | **1.2(1.2)  | 0.6(1.3)              |
+| Gerber\_p2004      | -1.2(1.3)           | **0.9(1.3)**  | 0.4(1.1)              |
+| Gerber\_p2004'     | **1.4(1.4)**  | 0.7(1.1)            | 0.7(1.2)              |
+| Hillstrom\_mens    | -4.6(2.2)           | **5.3(2.2)**  | 4.2(2.2)              |
+| Hillstrom\_mens'   | **6.6(1.9)**  | 5.9(2.3)            | 6.3(1.9)              |
+| Hillstrom\_newbie  | 2.4(1.9)            | **5.6(2.0)**  | 5.2(2.1)              |
+| Hillstrom\_newbie' | 4.1(1.9)            | **6.0(1.9)**  | 5.8(2.4)              |
+| Megafone\_X16      | **3.2(0.4)**  | 3.1(0.4)            | **3.2(0.4)**    |
+| Megafone\_X16'     | 3.1(0.5)            | **3.4(0.3)**  | 3.1(0.4)              |
+| Megafone\_X21      | 2.4(0.5)            | **3.1(0.4)**  | 3.0(0.5)              |
+| Megafone\_X21'     | 1.8(0.6)            | 2.5(0.5)            | **2.9(0.5)**    |
+| Synth1             | -2.9(1.3)           | -1.0(1.8)           | **-0.8(0.9)**   |
+| Synth1'            | -0.8(2.8)           | **-0.7(1.9)** | -1.3(2.0)             |
+| Synth2             | 1.1(0.2)            | **1.9(0.1)**  | 1.7(0.1)              |
+| Synth2'            | 1.4(0.4)            | 1.6(0.3)            | **1.8(0.1)**    |
+| retailHero\_age    | 0.8(0.4)            | **1.3(0.4)**  | 1.2(0.3)              |
+| retailHero\_age'   | **1.3(0.4)**  | 1.2(0.4)            | 1.2(0.4)              |
+| retailHero\_trNum  | 1.1(0.4)            | **1.2(0.4)**  | **1.2(0.4)**    |
+| retailHero\_trNum' | 1.1(0.4)            | 1.1(0.3)            | **1.2(0.4)**    |
+| zenodoSynth\_X10   | **12.1(1.5)** | 11.9(1.7)           | 9.8(1.8)              |
+| zenodoSynth\_X10'  | **12.0(1.7)** | 11.6(1.9)           | 9.9(2.0)              |
+| zenodoSynth\_X31   | 12.0(1.9)           | **12.1(1.7) **| 9.9(2.0)              |
+| zenodoSynth\_X31'  | 11.8(1.5)           | **12.1(1.8)** | 11.1(1.6)             |
+
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/Criteo_f2.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/Criteo_f2'.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/Criteo_f8'.png" width="310" />
+  </p>
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/Criteo_f8.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/Gerber_p2002'.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/Gerber_p2004'.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/Gerber_p2004.png " width="310" />
+  <img src="CT_LR_weighted/CTLR2/Hillstrom_mens'.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/Hillstrom_mens.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/Hillstrom_newbie'.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/Hillstrom_newbie.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/Synth2'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/Synth2.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/megafone_X16'.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/megafone_X16.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/megafone_X21'.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/megafone_X21.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/retailHero_age'.png" width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/retailHero_age.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/retailHero_trNum'.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/retailHero_trNum.png " width="310" />
+</p>
+
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/Synth1.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/Synth1'.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/zenodoSynth_X10'.png" width="310" />
+</p>
+<p float="left">
+  <img src="CT_LR_weighted/CTLR2/zenodoSynth_X10.png" width="310" />
+  <img src="CT_LR_weighted/CTLR2/zenodoSynth_X31'.png" width="310" /> 
+  <img src="CT_LR_weighted/CTLR2/zenodoSynth_X31.png" width="310" />
+</p>
+
 ### Class Transformation with Xgboost
 
 
@@ -241,93 +327,6 @@ A positive response is considered when the customer has made a purchase after be
   <img src="CT_Xgboost_weighted/CTXGboost2/zenodoSynth_X31.png" width="310" />
 </p>
 
-
-
-### Class Transformation with LR
-
-
-| {}                 | CT_LR              | CT_LR_wt1      | CT_LR_wt2 |
-|--------------------|---------------------|---------------------|-----------------------|
-| Criteo\_f2         | 1.9(1.2)            | 6.1(1.5)            | **8.2(2.0)**    |
-| Criteo\_f2'        | 7.6(1.4)            | **7.7(2.9)**  | 7.2(2.1)              |
-| Criteo\_f8         | 1.7(1.0)            | 5.5(1.8)            | **7.9(1.7)    |
-| Criteo\_f8'        | -2.0(1.3)           | 6.1(1.4)            | **7.3(2.0)**    |
-| Gerber\_p2002      | -0.4(1.2)           | **0.9(1.1)**  | 0.5(1.2)              |
-| Gerber\_p2002'     | 1.0(1.1)            | **1.2(1.2)  | 0.6(1.3)              |
-| Gerber\_p2004      | -1.2(1.3)           | **0.9(1.3)**  | 0.4(1.1)              |
-| Gerber\_p2004'     | **1.4(1.4)**  | 0.7(1.1)            | 0.7(1.2)              |
-| Hillstrom\_mens    | -4.6(2.2)           | **5.3(2.2)**  | 4.2(2.2)              |
-| Hillstrom\_mens'   | **6.6(1.9)**  | 5.9(2.3)            | 6.3(1.9)              |
-| Hillstrom\_newbie  | 2.4(1.9)            | **5.6(2.0)**  | 5.2(2.1)              |
-| Hillstrom\_newbie' | 4.1(1.9)            | **6.0(1.9)**  | 5.8(2.4)              |
-| Megafone\_X16      | **3.2(0.4)**  | 3.1(0.4)            | **3.2(0.4)**    |
-| Megafone\_X16'     | 3.1(0.5)            | **3.4(0.3)**  | 3.1(0.4)              |
-| Megafone\_X21      | 2.4(0.5)            | **3.1(0.4)**  | 3.0(0.5)              |
-| Megafone\_X21'     | 1.8(0.6)            | 2.5(0.5)            | **2.9(0.5)**    |
-| Synth1             | -2.9(1.3)           | -1.0(1.8)           | **-0.8(0.9)**   |
-| Synth1'            | -0.8(2.8)           | **-0.7(1.9)** | -1.3(2.0)             |
-| Synth2             | 1.1(0.2)            | **1.9(0.1)**  | 1.7(0.1)              |
-| Synth2'            | 1.4(0.4)            | 1.6(0.3)            | **1.8(0.1)**    |
-| retailHero\_age    | 0.8(0.4)            | **1.3(0.4)**  | 1.2(0.3)              |
-| retailHero\_age'   | **1.3(0.4)**  | 1.2(0.4)            | 1.2(0.4)              |
-| retailHero\_trNum  | 1.1(0.4)            | **1.2(0.4)**  | **1.2(0.4)**    |
-| retailHero\_trNum' | 1.1(0.4)            | 1.1(0.3)            | **1.2(0.4)**    |
-| zenodoSynth\_X10   | **12.1(1.5)** | 11.9(1.7)           | 9.8(1.8)              |
-| zenodoSynth\_X10'  | **12.0(1.7)** | 11.6(1.9)           | 9.9(2.0)              |
-| zenodoSynth\_X31   | 12.0(1.9)           | **12.1(1.7) **| 9.9(2.0)              |
-| zenodoSynth\_X31'  | 11.8(1.5)           | **12.1(1.8)** | 11.1(1.6)             |
-
-<p float="left">
-  <img src="CT_LR_weighted/CTLR2/Criteo_f2.png" width="310" />
-  <img src="CT_LR_weighted/CTLR2/Criteo_f2'.png" width="310" /> 
-  <img src="CT_LR_weighted/CTLR2/Criteo_f8'.png" width="310" />
-  </p>
-<p float="left">
-  <img src="CT_LR_weighted/CTLR2/Criteo_f8.png" width="310" />
-  <img src="CT_LR_weighted/CTLR2/Gerber_p2002'.png" width="310" /> 
-  <img src="CT_LR_weighted/CTLR2/Gerber_p2004'.png " width="310" />
-</p>
-
-<p float="left">
-  <img src="CT_LR_weighted/CTLR2/Gerber_p2004.png " width="310" />
-  <img src="CT_LR_weighted/CTLR2/Hillstrom_mens'.png" width="310" /> 
-  <img src="CT_LR_weighted/CTLR2/Hillstrom_mens.png" width="310" />
-</p>
-
-<p float="left">
-  <img src="CT_LR_weighted/CTLR2/Hillstrom_newbie'.png" width="310" />
-  <img src="CT_LR_weighted/CTLR2/Hillstrom_newbie.png" width="310" /> 
-  <img src="CT_LR_weighted/CTLR2/Synth2'.png" width="310" />
-</p>
-
-<p float="left">
-  <img src="CT_LR_weighted/CTLR2/Synth2.png" width="310" />
-  <img src="CT_LR_weighted/CTLR2/megafone_X16'.png" width="310" /> 
-  <img src="CT_LR_weighted/CTLR2/megafone_X16.png" width="310" />
-</p>
-
-<p float="left">
-  <img src="CT_LR_weighted/CTLR2/megafone_X21'.png" width="310" />
-  <img src="CT_LR_weighted/CTLR2/megafone_X21.png" width="310" /> 
-  <img src="CT_LR_weighted/CTLR2/retailHero_age'.png" width="310" />
-</p>
-
-<p float="left">
-  <img src="CT_LR_weighted/CTLR2/retailHero_age.png" width="310" />
-  <img src="CT_LR_weighted/CTLR2/retailHero_trNum'.png" width="310" /> 
-  <img src="CT_LR_weighted/CTLR2/retailHero_trNum.png " width="310" />
-</p>
-
-<p float="left">
-  <img src="CT_LR_weighted/CTLR2/Synth1.png" width="310" />
-  <img src="CT_LR_weighted/CTLR2/Synth1'.png" width="310" /> 
-  <img src="CT_LR_weighted/CTLR2/zenodoSynth_X10'.png" width="310" />
-</p>
-<p float="left">
-  <img src="CT_LR_weighted/CTLR2/zenodoSynth_X10.png" width="310" />
-  <img src="CT_LR_weighted/CTLR2/zenodoSynth_X31'.png" width="310" /> 
-  <img src="CT_LR_weighted/CTLR2/zenodoSynth_X31.png" width="310" />
-</p>
 
 
 
