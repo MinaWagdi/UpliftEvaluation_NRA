@@ -503,7 +503,7 @@ A positive response is considered when the customer has made a purchase after be
   <img src="2MLR/zenodoSynth_X31.png" width="310" />
 </p>
 
-# Slearner with Logistic Regression
+# Slearner with Linear Regression
 
 
 | {}                                                 | SLearner_LinR            | SLearner_LR_wt1    | SLearner_LR_wt2 |
@@ -593,7 +593,7 @@ A positive response is considered when the customer has made a purchase after be
 
 
 
-# Slearner with Linear regression
+# Slearner with Xgboost
 
 
 
