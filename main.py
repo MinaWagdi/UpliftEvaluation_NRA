@@ -108,36 +108,24 @@ def readListFromTxt(lst, filepath):
 def InverseTrtProb(trtData,CtrlData,features,model="LR"):
     frames = [trtData, CtrlData]
     df_LR = pd.concat(frames)
-    print("df_LR")
-    print(df_LR)
+    
     df_LR.drop("visit",inplace=True,axis=1)
     
     if model=="LR":
-        print("LR for treatment probability weighting")
         clf = LogisticRegression()
     elif model=="xg":
-        print("XGBOOST for treatment probability weighting")
         clf = XGBClassifier(n_estimators=25)
     clf.fit(X=df_LR[features],y=df_LR['segment'])
-    print("CLASSES")
-    print(clf.classes_)
     trtProbPred=clf.predict_proba(trtData[features])
-    
-    print("trtProbPred")
-    print(trtProbPred)
-    print(trtProbPred[:,0])
-    
+        
     return (trtProbPred[:,0]/trtProbPred[:,1])
     
 def performReweighting(DA, x,z,attributes):
     if DA=='rg':
         weights=ratioOfGaussians.iwe_ratio_gaussians(x[features], z[features])
-#         weights_control=iwe_ratio_gaussians(z, x)
-    elif DA=="trtProb":
+    elif DA=="wt1":
         weights=InverseTrtProb(x,z,attributes)
-        print("Weights LENGHT")
-        print(len(weights))
-    elif DA=="trtProbXgboost":
+    elif DA=="wt2":
         weights=InverseTrtProb(x,z,attributes,"xg")
         print("Weights LENGHT")
         print(len(weights))
@@ -154,38 +142,27 @@ def learnUpliftAndPlotAndGetQini(df_b_train,df_b_test,features, algorithm = 'KL'
     global EnterInIndividualsWeights
     global path
     DA = domain_ada
-    
-    print("LEARNINGGGG")
-    
+        
     df_tr = df_b_train.copy()
     df_te = df_b_test.copy()
-    
-    print("df_tr is ")
-    print(df_tr)
-    
+        
     df_tr['segment']=df_tr['segment'].astype(int)
     df_te['segment']=df_te['segment'].astype(int)
         
     X=df_tr[df_tr['segment']==1]
     Z=df_tr[df_tr['segment']==0]
     
-    print("XXXXXXXXXX is ")
-    print(X)
-    
     
     if algorithm == "KL" or algorithm =="CTS" or algorithm =="Chi" or algorithm=="ED":
         uplift_model = UpliftRandomForestClassifier(evaluationFunction = algorithm, control_name='0',max_features=4,n_estimators = 30,max_depth=10)
-        print("will fit")
-        print("features are ")
-        print(features)
         uplift_model.fit(df_tr[features].values,treatment=df_tr['segment'].astype(str),y=df_tr['visit'].values)
-        print("will predict")
         pred=uplift_model.predict(df_te[features].values)
-    elif algorithm=="SLearner" or algorithm =="WeightedXLearner" or algorithm =="TLearner" or algorithm=="RLearner" or algorithm =="XLearner" or algorithm =="DR" or algorithm=="DR_LR" or algorithm =="DR_Xgboost"  or algorithm=="XLearner_LR" or algorithm=="WeightsSlearner" or algorithm=="SLearner_Xgboost" or algorithm=="WeightedSLearner_Xgboost":
+    elif algorithm=="SLearner_LR" or algorithm=="SLearner_Xgboost" or algorithm =="TLearner" or algorithm=="RLearner" or algorithm =="XLearner_Xgboost" or algorithm=="XLearner_LR" or algorithm=="DR_LR" or algorithm =="DR_Xgboost"  :
         fitted = False
-        if algorithm=="SLearner":
+        if algorithm=="SLearner_LR":
+            #To use the Logistic regression function, the python file "slearner" in causalml library should be modified. All functions predict() should become predict_proba()[:0]
             learner = BaseSRegressor(learner=LinearRegression())
-            if DA=='rg' or DA=="trtProb" or DA=="trtProbXgboost":
+            if DA=='rg' or DA=="wt1" or DA=="wt2":
                 weights,weights_control=performReweighting(DA,X, Z,features)
                 w = np.concatenate([weights, weights_control])
                 learner.setWeights(w)
@@ -197,13 +174,10 @@ def learnUpliftAndPlotAndGetQini(df_b_train,df_b_test,features, algorithm = 'KL'
             pred=learner.predict(df_te[features].values)
         elif algorithm=="SLearner_Xgboost":
             learner = BaseSRegressor(learner=XGBRegressor())
-            if DA=='rg' or DA=="trtProb" or DA=="trtProbXgboost":
+            if DA=='rg' or DA=="wt1" or DA=="wt2":
                 weights,weights_control=performReweighting(DA,X, Z,features)
                 if SavePredictions==True and NoBias==True and EnterInIndividualsWeights==False:
-                    print("HELLO INDIVIDUALS WEIGHTS")
-    #                 testData_upliftPredictions = pd.concat([df_tr,pd.Series(weights)],axis=1)
                     ww = list(weights)+list(weights_control)
-    #                 weights = ww
                     IndividualsWithWeights=df_tr.copy()
                     IndividualsWithWeights['Weights']=pd.Series(ww)
                     EnterInIndividualsWeights=True
@@ -216,17 +190,13 @@ def learnUpliftAndPlotAndGetQini(df_b_train,df_b_test,features, algorithm = 'KL'
             learner.fit(X=df_tr[features].values, treatment=df_tr['segment'].values, y=df_tr['visit'].values)
             fitted=True
             pred=learner.predict(df_te[features].values)
-        elif algorithm=="WeightedXLearner":
-            learner = BaseXRegressor(learner=XGBRegressor())
-            learner.fit2(X=df_tr[features].values, treatment=df_tr['segment'].values, y=df_tr['visit'].values)
-            fitted=True
-            pred=learner.predict2(df_te[features].values)
-        elif algorithm == "XLearner":
+        elif algorithm == "XLearner_Xgboost":
             learner = BaseXRegressor(learner=XGBRegressor())
             learner.fit(X=df_tr[features].values, treatment=df_tr['segment'].values, y=df_tr['visit'].values)
             fitted=True
             pred=learner.predict(df_te[features].values)
         elif algorithm == "XLearner_LR":
+            #To use the Logistic regression function, the python file "slearner" in causalml library should be modified. All functions predict() should become predict_proba()[:0]
             learner = BaseXRegressor(learner=LinearRegression())
             learner.fit(X=df_tr[features].values, treatment=df_tr['segment'].values, y=df_tr['visit'].values)
             fitted=True
@@ -238,9 +208,9 @@ def learnUpliftAndPlotAndGetQini(df_b_train,df_b_test,features, algorithm = 'KL'
         elif algorithm=="DR_Xgboost":
             learner=BaseDRLearner(learner=XGBRegressor())
         elif algorithm=="DR_LR":
+            #To use the Logistic regression function, the python file "slearner" in causalml library should be modified. All functions predict() should become predict_proba()[:0]
             learner=BaseDRLearner(learner=LinearRegression())
-#         elif algorithm=="DR_Xgboost":
-#             learner=BaseDRLearner(learner=XGBClassifier(n_estimators=25))
+
         if fitted==False:
             learner.fit(X=df_tr[features].values, treatment=df_tr['segment'].values, y=df_tr['visit'].values)
             pred=learner.predict(df_te[features].values)
@@ -260,12 +230,8 @@ def learnUpliftAndPlotAndGetQini(df_b_train,df_b_test,features, algorithm = 'KL'
         method='vanilla'
         )
         
-        if DA=='rg' or DA=="trtProb" or DA=="trtProbXgboost":
-            print("Features are")
-            print(features)
+        if DA=='rg' or DA=="wt1" or DA=="wt2":
             weights,weights_control=performReweighting(DA,X, Z,features)
-            print("variance is")
-            print(np.var(weights))
             
             frames = [X, Z]
             df_tr = pd.concat(frames)
@@ -273,7 +239,6 @@ def learnUpliftAndPlotAndGetQini(df_b_train,df_b_test,features, algorithm = 'KL'
             
             #To Save the predicted weights
             if SavePredictions==True and NoBias==True and EnterInIndividualsWeights==False:
-                print("HELLO INDIVIDUALS WEIGHTS")
 #                 testData_upliftPredictions = pd.concat([df_tr,pd.Series(weights)],axis=1)
                 ww = list(weights)+list(weights_control)
 #                 weights = ww
@@ -295,18 +260,13 @@ def learnUpliftAndPlotAndGetQini(df_b_train,df_b_test,features, algorithm = 'KL'
         
         ct = ClassTransformation(estimator=estimator)
         
-        if DA=='rg' or DA=="trtProb" or DA=="trtProbXgboost":
+        if DA=='rg' or DA=="wt1" or DA=="wt2":
             weights,weights_control=performReweighting(DA,X, Z,features)
             
             frames = [X, Z]
             df_tr = pd.concat(frames)
             
-            
-            print("weights mean")
-            print(np.mean(weights))
-            print("variance is")
-            print(np.var(weights))
-            
+             
             w = np.concatenate([weights, weights_control])
 #             w =  weights + weights_control
 #             weights = list(w)
@@ -329,10 +289,7 @@ def learnUpliftAndPlotAndGetQini(df_b_train,df_b_test,features, algorithm = 'KL'
             pred = ct.predict(df_te[features])
     else: 
         print("ERROOR IN MODEL CHOICE")
-    print("Arrived after predictions")
     result = pd.DataFrame(pred,columns=["1"])
-    print("predictions results shape are ",result.shape)
-    print(result)
     
     df_te.reset_index(inplace=True)
     trt=df_te["segment"]
@@ -398,22 +355,13 @@ def choosingBias(df_to_Bias,Variables,E2_values=None):
             random.seed(99)
         s = random.sample(s,len(s))
         s = s[:len(s)//2]
-        print("E2 values is None")
-        print(s)
-        print(dfBiasChosen['VarBias'].value_counts())
     else:
-        print("E2 vaalues taken into consideration")
         s=E2_values
-    print("S that will go in E2 is ")
-    print(s)
     dfBiasChosen['Group']=np.where(dfBiasChosen[Variables[0]].isin(s),'2','1')
-    print("Group value counts")
-    print(dfBiasChosen['Group'].value_counts())
     #remove unnecessary columns
     dfBiasChosen.drop(['VarBias'],axis=1,inplace = True)
     dfBiasChosen['stratified']="visit"+dfBiasChosen['visit'].astype(str)+"treatment"+dfBiasChosen['segment'].astype(str)
     
-    print("Uplift Moyen",str(dfBiasChosen[(dfBiasChosen['Group']=='1')&(dfBiasChosen['segment']=='1')]['visit'].mean()-dfBiasChosen[(dfBiasChosen['Group']=='1')&(dfBiasChosen['segment']=='0')]['visit'].mean()))
     DetailedOutputExcelDataframe.loc["UpliftMoyenE1","".join(Variables)]=dfBiasChosen[(dfBiasChosen['Group']=='1')&(dfBiasChosen['segment']=='1')]['visit'].mean()-dfBiasChosen[(dfBiasChosen['Group']=='1')&(dfBiasChosen['segment']=='0')]['visit'].mean()
     DetailedOutputExcelDataframe.loc["UpliftMoyenE2","".join(Variables)]=dfBiasChosen[(dfBiasChosen['Group']=='2')&(dfBiasChosen['segment']=='1')]['visit'].mean()-dfBiasChosen[(dfBiasChosen['Group']=='2')&(dfBiasChosen['segment']=='0')]['visit'].mean()
     
@@ -439,13 +387,6 @@ def stratifiedCVAndQiniEval(df_Biased,X,VariablesToBias,algorithm="KL",nfolds = 
         if BIAS==0:
             df_train.to_csv("df_trainBias0.csv")
             BIAS=BIAS+1
-        print("df_train head is ")
-        print(df_train.head())
-        print("df_train shape is ",df_train.shape)
-        print("df_test shape is ",df_test.shape)
-        print("test segment value_counts")
-        print(df_test['segment'].value_counts())
-        print("\nFrom this train and test indices, create biased datasets, where in the treatment Group contains 50% Group1 to 80%")
         l=[]
         if Bias=="X":
             l = createBiasedDfsHillstromWthNRBias(df_train)
